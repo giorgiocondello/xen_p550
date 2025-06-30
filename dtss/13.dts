@@ -11,7 +11,7 @@
 	};
 	
 	chosen {
-		xen,xen-bootargs = "com1=115200,8n1 sched=null";
+		xen,xen-bootargs = "com1=poll sched=null";
 		
 		stdout-path = "serial0";
 		
