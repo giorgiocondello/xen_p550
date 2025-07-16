@@ -11,7 +11,7 @@
 	};
 	
 	chosen {
-		xen,xen-bootargs = "console=dtuart dtuart=serial0,115200,poll sched=null"
+		xen,xen-bootargs = "console=dtuart dtuart=serial0,115200,poll sched=null";
 		
 		stdout-path = "serial0";
 		
