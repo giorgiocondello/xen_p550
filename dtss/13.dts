@@ -21,7 +21,7 @@
 		};
 		
 		module@0x808ef000 {
-			bootargs = "rw root=/dev/ram console=ttyS0,115200 earlycon=sbi earlyprintk keep_bootcon bootmem_debug debug";
+			bootargs = "rw root=/dev/ram console=hvc0 earlycon=sbi earlyprintk keep_bootcon bootmem_debug debug";
 			compatible = "multiboot,module", "multiboot,kernel";
 			reg = <0x00 0x808ef000 0x00 0x68ff6d>;
 		};
@@ -120,6 +120,7 @@
 			reg = <0x00 0x50900000 0x00 0x10000>;
 			reg-shift = <0x02>;
 			reg-io-width = <0x04>;
+			current-speed = <115200>;
 			status = "okay";
 		};
 
