@@ -34,26 +34,6 @@
 				reg = <0x808ef000 0x68ff6d>;
 			};
 		};
-		
-		DOMU2 {
-			#address-cells = <0x01>;
-			#size-cells = <0x01>;
-			compatible = "xen,domain";
-			memory = <0x00 0x40000>;
-			cpus = <0x01>;
-			vsbi_uart; /* remove this line if not needed */
-
-			module@0xa0000000 {
-				compatible = "multiboot,module", "multiboot,ramdisk";
-				reg = <0xa0000000 0x659000>;
-			};
-			
-			module@0xb0000000 {
-				bootargs = "rw root=/dev/ram console=hvc0 earlycon=sbi earlyprintk keep_bootcon bootmem_debug debug";
-				compatible = "multiboot,module", "multiboot,kernel";
-				reg = <0xb0000000 0x68ff6d>;
-			};
-		};
 	};
 
 	hypervisor {
