@@ -2385,6 +2385,7 @@ All set up
 (XEN) implement show_execution_state(regs)
 
 *****************************************************************************************
+********************************* 33.dts with xen,passthrough; **************************
 
 pll config ok
 die_num:0,die_ordinal:0
@@ -3540,6 +3541,7 @@ All set up
 (XEN) [    1.416234]     HOME=/
 
 (XEN) [    1.419185]     TERM=linux
+
 
 
 
