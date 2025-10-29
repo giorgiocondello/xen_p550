@@ -1,0 +1,558 @@
+[?2004h[01;32mgiorgiocondello@INV973[00m:[01;34m~/Desktop[00m$ screen /dewv[K[Kv/ttyUSB2 115200
+[?2004l[?2004h[01;32mgiorgiocondello@INV973[00m:[01;34m~/Desktop[00m$ pll config ok
+die_num:0,die_ordinal:0
+Firmware version:1.5;disable ECC
+PHY0 training process:06%
+[1A[KPHY0 training process:12%
+[1A[KPHY0 training process:18%
+[1A[KPHY0 training process:24%
+[1A[KPHY0 training process:30%
+[1A[KPHY0 training process:36%
+[1A[KPHY0 training process:42%
+[1A[KPHY0 training process:48%
+[1A[KPHY0 training process:54%
+[1A[KPHY0 training process:60%
+[1A[KPHY0 training process:66%
+[1A[KPHY0 training process:72%
+[1A[KPHY0 training process:78%
+[1A[KPHY0 training process:84%
+[1A[KPHY0 training process:90%
+[1A[KPHY0 training process:96%
+[1A[KPHY0 training process:100%
+[1A[KPHY0 training process:100%
+PHY1 training process:06%
+[1A[KPHY1 training process:12%
+[1A[KPHY1 training process:18%
+[1A[KPHY1 training process:24%
+[1A[KPHY1 training process:30%
+[1A[KPHY1 training process:36%
+[1A[KPHY1 training process:42%
+[1A[KPHY1 training process:48%
+[1A[KPHY1 training process:54%
+[1A[KPHY1 training process:60%
+[1A[KPHY1 training process:66%
+[1A[KPHY1 training process:72%
+[1A[KPHY1 training process:78%
+[1A[KPHY1 training process:84%
+[1A[KPHY1 training process:90%
+[1A[KPHY1 training process:96%
+[1A[KPHY1 training process:100%
+[1A[KPHY1 training process:100%
+DDR type:LPDDR5;Size:16GB,Data Rate:6400MT/s
+DDR self test OK
+
+OpenSBI v1.4
+   ____                    _____ ____ _____
+  / __ \                  / ____|  _ \_   _|
+ | |  | |_ __   ___ _ __ | (___ | |_) || |
+ | |  | | '_ \ / _ \ '_ \ \___ \|  _ < | |
+ | |__| | |_) |  __/ | | |____) | |_) || |_
+  \____/| .__/ \___|_| |_|_____/|____/_____|
+        | |
+        |_|
+
+Platform Name             : ESWIN EIC770X
+Platform Features         : none
+Platform HART Count       : 4
+Platform IPI Device       : aclint-mswi
+Platform Timer Device     : aclint-mtimer @ 1000000Hz
+Platform Console Device   : uart8250
+Platform HSM Device       : ---
+Platform PMU Device       : ---
+Platform Reboot Device    : eswin_eic770x_reset
+Platform Shutdown Device  : eswin_eic770x_reset
+Platform Suspend Device   : ---
+Platform CPPC Device      : ---
+Firmware Base             : 0x80000000
+Firmware Size             : 344 KB
+Firmware RW Offset        : 0x40000
+Firmware RW Size          : 88 KB
+Firmware Heap Offset      : 0x4c000
+Firmware Heap Size        : 40 KB (total), 2 KB (reserved), 9 KB (used), 28 KB (free)
+Firmware Scratch Size     : 4096 B (total), 296 B (used), 3800 B (free)
+Runtime SBI Version       : 2.0
+
+Domain0 Name              : root
+Domain0 Boot HART         : 3
+Domain0 HARTs             : 0*,1*,2*,3*
+Domain0 Region00          : 0x0000000002008000-0x000000000200bfff M: (I,R,W) S/U: ()
+Domain0 Region01          : 0x0000000002000000-0x0000000002007fff M: (I,R,W) S/U: ()
+Domain0 Region02          : 0x0000000080040000-0x000000008005ffff M: (R,W) S/U: ()
+Domain0 Region03          : 0x0000000080000000-0x000000008003ffff M: (R,X) S/U: ()
+Domain0 Region04          : 0x0000001000000000-0x0000007fffffffff M: () S/U: ()
+Domain0 Region05          : 0x0000000020000000-0x000000003fffffff M: () S/U: ()
+Domain0 Region06          : 0x0000000000000000-0xffffffffffffffff M: () S/U: (R,W,X)
+Domain0 Next Address      : 0x0000000080200000
+Domain0 Next Arg1         : 0x00000000f8000000
+Domain0 Next Mode         : S-mode
+Domain0 SysReset          : yes
+Domain0 SysSuspend        : yes
+
+Boot HART ID              : 3
+Boot HART Domain          : root
+Boot HART Priv Version    : v1.11
+Boot HART Base ISA        : rv64imafdchx
+Boot HART ISA Extensions  : sscofpmf,zihpm
+Boot HART PMP Count       : 8
+Boot HART PMP Granularity : 12 bits
+Boot HART PMP Address Bits: 39
+Boot HART MHPM Info       : 4 (0x00000078)
+Boot HART MIDELEG         : 0x0000000000002666
+Boot HART MEDELEG         : 0x0000000000f00509
+
+
+U-Boot 2024.01 (Feb 10 2025 - 07:38:29 +0000)
+
+CPU:   rv64imafdc_zba_zbb
+Model: SiFive HiFive Premier P550
+DRAM:  16 GiB
+Core:  141 devices, 30 uclasses, devicetree: separate
+Warning: Device tree includes old 'u-boot,dm-' tags: please fix by 2023.07!
+MMC:   sdhci@50450000: 0, sd@50460000: 1
+Loading Environment from SPIFlash... SF: Detected w25q128fw with page size 256 Bytes, erase size 4 KiB, total 16 MiB
+*** Warning - bad CRC, using default environment
+
+eswin_pcie_wait_link_up: error: wait linkup timeout
+PCIE-0: Link up (Gen1-x1, Bus0)
+[display_init]Eswin UBOOT DRM driver version: v1.0.1
+In:    serial,usbkbd
+Out:   vidconsole,serial
+Err:   vidconsole,serial
+Success to initialize SPI flash at spi@51800000
+Bootspi flash write protection enabled
+Get som info from flash
+ERROR: No valid SOM Board info
+Cpu volatge need boost above 1.6 Ghz!
+Low power features will not be supported!
+Net:   eth0: ethernet@50400000
+Working FDT set to ed519130
+starting USB...
+Bus usb1@50490000: Register 2000140 NbrPorts 2
+Starting the controller
+USB XHCI 1.10
+scanning bus usb1@50490000 for devices... 3 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+No SATA device found!
+Hit any key to stop autoboot:  2  0
+=> es_fs update mmc boot.vfat mmc 0#boot
+es_fs - ESWIN write filesystem image file into sata/mmc
+
+Usage:
+es_fs 
+es_fs write rifname  dev_part filename wifname dev_num 
+  - Write System image file(.wic) from {rifname} {dev_part} to {wifname} {dev_num}
+    rifname dev_part : block device and partition
+    filename : filesystem image file (e.g. xxx.wic)
+    wifname dev_num : set write image file block device(sata, mmc)
+        You can see the device num for the emmc or sd card in the cmd "mmc list"(e.g. 0, 1)
+    e.g. : es_fs write usb 0 image.wic sata 0
+es_fs update ifname  dev_part filename wifname wdev_part
+  - Write File system image file from {ifname} {dev_part} to mmc {dev_part_num}
+    ifname dev_part : block device and partition
+    filename : filesystem image file (e.g. boot.ext4, root.ext4)
+    wifname : block device name (sata,mmc)    wdev_part : image file is written to the block device partition number or name (e.g. 0#boot, 0:1)
+    e.g. : es_fs update usb 0 boot.ext4 sata 0#boot
+
+=> es_fs update mmc boot.vfat mmc 0#boot1boot.vfat mmc 0#boot boot.vfat mmc 0#boot
+Write progress:   0%:Write progress:  12%:++++++Write progress:  25%:++++++++++++Write progress:  37%:++++++++++++++++++Write progress:  50%:+++++++++++++++++++++++++Write progress:  62%:+++++++++++++++++++++++++++++++Write progress:  75%:+++++++++++++++++++++++++++++++++++++Write progress:  87%:+++++++++++++++++++++++++++++++++++++++++++Write progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++Write progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++
+mmc has been successfully writen in mmc 0#boot
+=> fatload mmc 0:1 0x808ef0000  Image.gz
+6881133 bytes read in 51 ms (128.7 MiB/s)
+=> fatload mmc 0:1 0x90400000 initrd.img
+6656000 bytes read in 49 ms (129.5 MiB/s)
+=> boot
+scanning bus for devices...
+Rescanning SATA bus for devices...
+** Booting bootflow 'sdhci@50450000.bootdev.part_1' with extlinux
+1:	OpenEmbedded-Sifive-hifive-premier-p550
+Retrieving file: /xen.uImage
+append: dom0_mem=512M console=hvc0 earlycon=sbi bootscrub=0 earlycon root=/dev/ram rw
+Retrieving file: /eic7700-hifive-premier-p550.dtb
+## Booting kernel from Legacy Image at 84000000 ...
+   Image Name:   XEN
+   Image Type:   RISC-V Linux Kernel Image (uncompressed)
+   Data Size:    574608 Bytes = 561.1 KiB
+   Load Address: 84000000
+   Entry Point:  84000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 88000000
+   Booting using the fdt blob at 0x88000000
+Working FDT set to 88000000
+   Loading Kernel Image
+   Using Device Tree in place at 0000000088000000, end 0000000088003b5e
+Working FDT set to 88000000
+
+Starting kernel ...
+
+[DBG] Check MMU mode support
+[DBG] SATP mode is SV48
+(XEN) fixmap is mapped
+Hello from C env
+If you see this message, run_in_exception_handler is most likely working
+(XEN) Xen WARN at arch/riscv/setup.c:55
+(XEN) implement show_execution_state(regs)
+If you see this message, WARN is most likely working
+(XEN) Checking for initrd in /chosen
+(XEN) Checking for "xen,static-mem" in domain node
+(XEN) RAM: 0000000080000000 - 00000000ffffffff
+(XEN) 
+(XEN) MODULE[0]: 0000000088000000 - 0000000088001000 Device Tree 
+(XEN) MODULE[1]: 0000000090400000 - 0000000090a59000 Ramdisk     
+(XEN) MODULE[2]: 00000000808ef000 - 0000000080f7ef6d Kernel      
+(XEN)  RESVD[0]: 00000000dfff0000 - 00000000dfffffff
+(XEN)  RESVD[1]: 00000000e0000000 - 00000000e0ffffff
+(XEN)  RESVD[2]: 0000000020000000 - 000000003fffffff
+(XEN)  RESVD[3]: 0000001000000000 - 00000010003fffff
+(XEN)  RESVD[4]: 0000000080000000 - 000000008003ffff
+(XEN)  RESVD[5]: 0000000080040000 - 000000008005ffff
+(XEN) 
+(XEN) CMDLINE[00000000808ef000]:DOMU1 rw root=/dev/ram console=hvc0 earlycon=sbi earlyprintk keep_bootcon bootmem_debug debug
+(XEN) 
+(XEN) Command line: com1=poll sched=null
+(XEN) Domain heap initialised
+(XEN)  -> unflatten_device_tree()
+(XEN) Unflattening device tree:
+(XEN) magic: 0xd00dfeed
+(XEN) size: 0x001000
+(XEN) version: 0x000011
+(XEN)   size is 0x2958 allocating...
+(XEN)   unflattening 6400008e8000...
+(XEN) fixed up name for  -> 
+(XEN) fixed up name for reserved-memory -> reserved-memory
+(XEN) fixed up name for lpcpures@dfff0000 -> lpcpures
+(XEN) fixed up name for region@e0000000 -> region
+(XEN) fixed up name for mmode_resv3@20000000 -> mmode_resv3
+(XEN) fixed up name for mmode_resv2@10,0 -> mmode_resv2
+(XEN) fixed up name for mmode_resv1@80000000 -> mmode_resv1
+(XEN) fixed up name for mmode_resv0@80040000 -> mmode_resv0
+(XEN) fixed up name for chosen -> chosen
+(XEN) fixed up name for DOMU1 -> DOMU1
+(XEN) fixed up name for module@0x90400000 -> module
+(XEN) fixed up name for module@0x808ef000 -> module
+(XEN) fixed up name for hypervisor -> hypervisor
+(XEN) fixed up name for memory@80000000 -> memory
+(XEN) fixed up name for cpus -> cpus
+(XEN) fixed up name for cpu@0 -> cpu
+(XEN) fixed up name for interrupt-controller -> interrupt-controller
+(XEN) fixed up name for cpu@1 -> cpu
+(XEN) fixed up name for interrupt-controller -> interrupt-controller
+(XEN) fixed up name for cpu@2 -> cpu
+(XEN) fixed up name for interrupt-controller -> interrupt-controller
+(XEN) fixed up name for cpu@3 -> cpu
+(XEN) fixed up name for interrupt-controller -> interrupt-controller
+(XEN) fixed up name for cpu-map -> cpu-map
+(XEN) fixed up name for cluster0 -> cluster0
+(XEN) fixed up name for core0 -> core0
+(XEN) fixed up name for core1 -> core1
+(XEN) fixed up name for core2 -> core2
+(XEN) fixed up name for core3 -> core3
+(XEN) fixed up name for soc -> soc
+(XEN) fixed up name for serial@0x50900000 -> serial
+(XEN) fixed up name for interrupt-controller@c000000 -> interrupt-controller
+(XEN)  <- unflatten_device_tree()
+(XEN) Falling back to deprecated "riscv,isa"
+(XEN) riscv: base ISA extensions acdfim
+(XEN) riscv: ELF capabilities acdfim
+(XEN) SMP: Allowing 4 CPUs
+(XEN) Taking dtuart configuration from /chosen/stdout-path
+(XEN) Looking for dtuart at "/soc/serial@0x50900000", options ""
+(XEN) [DBG] Baud rate is -1
+(XEN) DT: ** translation for device /soc/serial@0x50900000 **
+(XEN) DT: bus is default (na=2, ns=2) on /soc
+(XEN) DT: translating address:<3> 00000000<3> 50900000<3>
+(XEN) DT: parent bus is default (na=2, ns=2) on /
+(XEN) DT: empty ranges; 1:1 translation
+(XEN) DT: parent translation for:<3> 00000000<3> 00000000<3>
+(XEN) DT: with offset: 50900000
+(XEN) DT: one level translation:<3> 00000000<3> 50900000<3>
+(XEN) DT: reached root node
+(XEN) dt_device_get_raw_irq: dev=/soc/serial@0x50900000, index=0
+(XEN)  using 'interrupts' property
+(XEN)  intspec=100 intlen=1
+(XEN)  intsize=1 intlen=1
+(XEN) dt_irq_map_raw: par=/soc/interrupt-controller@c000000,intspec=[0x00000064 0x00000003...],ointsize=1
+(XEN) dt_irq_map_raw: ipar=/soc/interrupt-controller@c000000, size=1
+(XEN)  -> addrsize=0
+(XEN)  -> got it !
+(XEN) [DBG] Baud rate is -1 - ns16550.c line 345 
+(XEN) Automatic baud rate determination was requested, but a baud rate was not set up Xen 4.18-unstable
+(XEN) Xen version 4.18-unstable (@) (riscv64-linux-gnu-gcc (GCC) 12.2.0) debug=y Mon Oct 27 11:43:54 UTC 2025
+(XEN) Latest ChangeSet: Tue Dec 3 20:41:06 2024 +0100 git:bff0d6f9df-dirty
+(XEN) build-id: bdd99c99fdf126b80f82323f73a21db441acf38d
+(XEN) init_xen_time: need to be implemented
+(XEN) init_timer_interrupt: need to be implemented
+(XEN) Using scheduler: null Scheduler (null)
+(XEN) Initializing null scheduler
+(XEN) WARNING: This is experimental software in development.
+(XEN) Use at your own risk.
+(XEN) Create vCPU with sp=0x6400008e0ee8, pc=0xffffffffc0028fb8, cpu_info(0x6400008e0ee8)
+All set up
+pll config ok
+die_num:0,die_ordinal:0
+Firmware version:1.5;disable ECC
+PHY0 training process:06%
+[1A[KPHY0 training process:12%
+[1A[KPHY0 training process:18%
+[1A[KPHY0 training process:24%
+[1A[KPHY0 training process:30%
+[1A[KPHY0 training process:36%
+[1A[KPHY0 training process:42%
+[1A[KPHY0 training process:48%
+[1A[KPHY0 training process:54%
+[1A[KPHY0 training process:60%
+[1A[KPHY0 training process:66%
+[1A[KPHY0 training process:72%
+[1A[KPHY0 training process:78%
+[1A[KPHY0 training process:84%
+[1A[KPHY0 training process:90%
+[1A[KPHY0 training process:96%
+[1A[KPHY0 training process:100%
+[1A[KPHY0 training process:100%
+PHY1 training process:06%
+[1A[KPHY1 training process:12%
+[1A[KPHY1 training process:18%
+[1A[KPHY1 training process:24%
+[1A[KPHY1 training process:30%
+[1A[KPHY1 training process:36%
+[1A[KPHY1 training process:42%
+[1A[KPHY1 training process:48%
+[1A[KPHY1 training process:54%
+[1A[KPHY1 training process:60%
+[1A[KPHY1 training process:66%
+[1A[KPHY1 training process:72%
+[1A[KPHY1 training process:78%
+[1A[KPHY1 training process:84%
+[1A[KPHY1 training process:90%
+[1A[KPHY1 training process:96%
+[1A[KPHY1 training process:100%
+[1A[KPHY1 training process:100%
+DDR type:LPDDR5;Size:16GB,Data Rate:6400MT/s
+DDR self test OK
+
+OpenSBI v1.4
+   ____                    _____ ____ _____
+  / __ \                  / ____|  _ \_   _|
+ | |  | |_ __   ___ _ __ | (___ | |_) || |
+ | |  | | '_ \ / _ \ '_ \ \___ \|  _ < | |
+ | |__| | |_) |  __/ | | |____) | |_) || |_
+  \____/| .__/ \___|_| |_|_____/|____/_____|
+        | |
+        |_|
+
+Platform Name             : ESWIN EIC770X
+Platform Features         : none
+Platform HART Count       : 4
+Platform IPI Device       : aclint-mswi
+Platform Timer Device     : aclint-mtimer @ 1000000Hz
+Platform Console Device   : uart8250
+Platform HSM Device       : ---
+Platform PMU Device       : ---
+Platform Reboot Device    : eswin_eic770x_reset
+Platform Shutdown Device  : eswin_eic770x_reset
+Platform Suspend Device   : ---
+Platform CPPC Device      : ---
+Firmware Base             : 0x80000000
+Firmware Size             : 344 KB
+Firmware RW Offset        : 0x40000
+Firmware RW Size          : 88 KB
+Firmware Heap Offset      : 0x4c000
+Firmware Heap Size        : 40 KB (total), 2 KB (reserved), 9 KB (used), 28 KB (free)
+Firmware Scratch Size     : 4096 B (total), 296 B (used), 3800 B (free)
+Runtime SBI Version       : 2.0
+
+Domain0 Name              : root
+Domain0 Boot HART         : 1
+Domain0 HARTs             : 0*,1*,2*,3*
+Domain0 Region00          : 0x0000000002008000-0x000000000200bfff M: (I,R,W) S/U: ()
+Domain0 Region01          : 0x0000000002000000-0x0000000002007fff M: (I,R,W) S/U: ()
+Domain0 Region02          : 0x0000000080040000-0x000000008005ffff M: (R,W) S/U: ()
+Domain0 Region03          : 0x0000000080000000-0x000000008003ffff M: (R,X) S/U: ()
+Domain0 Region04          : 0x0000001000000000-0x0000007fffffffff M: () S/U: ()
+Domain0 Region05          : 0x0000000020000000-0x000000003fffffff M: () S/U: ()
+Domain0 Region06          : 0x0000000000000000-0xffffffffffffffff M: () S/U: (R,W,X)
+Domain0 Next Address      : 0x0000000080200000
+Domain0 Next Arg1         : 0x00000000f8000000
+Domain0 Next Mode         : S-mode
+Domain0 SysReset          : yes
+Domain0 SysSuspend        : yes
+
+Boot HART ID              : 1
+Boot HART Domain          : root
+Boot HART Priv Version    : v1.11
+Boot HART Base ISA        : rv64imafdchx
+Boot HART ISA Extensions  : sscofpmf,zihpm
+Boot HART PMP Count       : 8
+Boot HART PMP Granularity : 12 bits
+Boot HART PMP Address Bits: 39
+Boot HART MHPM Info       : 4 (0x00000078)
+Boot HART MIDELEG         : 0x0000000000002666
+Boot HART MEDELEG         : 0x0000000000f00509
+
+
+U-Boot 2024.01 (Feb 10 2025 - 07:38:29 +0000)
+
+CPU:   rv64imafdc_zba_zbb
+Model: SiFive HiFive Premier P550
+DRAM:  16 GiB
+Core:  141 devices, 30 uclasses, devicetree: separate
+Warning: Device tree includes old 'u-boot,dm-' tags: please fix by 2023.07!
+MMC:   sdhci@50450000: 0, sd@50460000: 1
+Loading Environment from SPIFlash... SF: Detected w25q128fw with page size 256 Bytes, erase size 4 KiB, total 16 MiB
+*** Warning - bad CRC, using default environment
+
+eswin_pcie_wait_link_up: error: wait linkup timeout
+PCIE-0: Link up (Gen1-x1, Bus0)
+[display_init]Eswin UBOOT DRM driver version: v1.0.1
+In:    serial,usbkbd
+Out:   vidconsole,serial
+Err:   vidconsole,serial
+Success to initialize SPI flash at spi@51800000
+Bootspi flash write protection enabled
+Get som info from flash
+ERROR: No valid SOM Board info
+Cpu volatge need boost above 1.6 Ghz!
+Low power features will not be supported!
+Net:   eth0: ethernet@50400000
+Working FDT set to ed519130
+starting USB...
+Bus usb1@50490000: Register 2000140 NbrPorts 2
+Starting the controller
+USB XHCI 1.10
+scanning bus usb1@50490000 for devices... 3 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+No SATA device found!
+Hit any key to stop autoboot:  2  0 
+=> es_fs update mmc 1 boot.vfat mmc 0#boot
+Write progress:   0%:Write progress:  12%:++++++Write progress:  25%:++++++++++++Write progress:  37%:++++++++++++++++++Write progress:  50%:+++++++++++++++++++++++++Write progress:  62%:+++++++++++++++++++++++++++++++Write progress:  75%:+++++++++++++++++++++++++++++++++++++Write progress:  87%:+++++++++++++++++++++++++++++++++++++++++++Write progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++Write progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++
+mmc has been successfully writen in mmc 0#boot
+=> fatload mmc 0:1 0x808ef000 Image.gz
+6881133 bytes read in 51 ms (128.7 MiB/s)
+=> fatload mmc 0:1 0x90400000 initrd.img
+6656000 bytes read in 49 ms (129.5 MiB/s)
+=> boot
+scanning bus for devices...
+Rescanning SATA bus for devices...
+** Booting bootflow 'sdhci@50450000.bootdev.part_1' with extlinux
+1:	OpenEmbedded-Sifive-hifive-premier-p550
+Retrieving file: /xen.uImage
+append: dom0_mem=512M console=hvc0 earlycon=sbi bootscrub=0 earlycon root=/dev/ram rw
+Retrieving file: /eic7700-hifive-premier-p550.dtb
+## Booting kernel from Legacy Image at 84000000 ...
+   Image Name:   XEN
+   Image Type:   RISC-V Linux Kernel Image (uncompressed)
+   Data Size:    574608 Bytes = 561.1 KiB
+   Load Address: 84000000
+   Entry Point:  84000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 88000000
+   Booting using the fdt blob at 0x88000000
+Working FDT set to 88000000
+   Loading Kernel Image
+   Using Device Tree in place at 0000000088000000, end 0000000088003b66
+Working FDT set to 88000000
+
+Starting kernel ...
+
+[DBG] Check MMU mode support
+[DBG] SATP mode is SV48
+(XEN) fixmap is mapped
+Hello from C env
+If you see this message, run_in_exception_handler is most likely working
+(XEN) Xen WARN at arch/riscv/setup.c:55
+(XEN) implement show_execution_state(regs)
+If you see this message, WARN is most likely working
+(XEN) Checking for initrd in /chosen
+(XEN) Checking for "xen,static-mem" in domain node
+(XEN) RAM: 0000000080000000 - 00000000ffffffff
+(XEN) 
+(XEN) MODULE[0]: 0000000088000000 - 0000000088001000 Device Tree 
+(XEN) MODULE[1]: 0000000090400000 - 0000000090a59000 Ramdisk     
+(XEN) MODULE[2]: 00000000808ef000 - 0000000080f7ef6d Kernel      
+(XEN)  RESVD[0]: 00000000dfff0000 - 00000000dfffffff
+(XEN)  RESVD[1]: 00000000e0000000 - 00000000e0ffffff
+(XEN)  RESVD[2]: 0000000020000000 - 000000003fffffff
+(XEN)  RESVD[3]: 0000001000000000 - 00000010003fffff
+(XEN)  RESVD[4]: 0000000080000000 - 000000008003ffff
+(XEN)  RESVD[5]: 0000000080040000 - 000000008005ffff
+(XEN) 
+(XEN) CMDLINE[00000000808ef000]:DOMU1 rw root=/dev/ram console=hvc0 earlycon=sbi earlyprintk keep_bootcon bootmem_debug debug
+(XEN) 
+(XEN) Command line: com1=poll sched=null
+(XEN) Domain heap initialised
+(XEN)  -> unflatten_device_tree()
+(XEN) Unflattening device tree:
+(XEN) magic: 0xd00dfeed
+(XEN) size: 0x001000
+(XEN) version: 0x000011
+(XEN)   size is 0x2958 allocating...
+(XEN)   unflattening 6400008e8000...
+(XEN) fixed up name for  -> 
+(XEN) fixed up name for reserved-memory -> reserved-memory
+(XEN) fixed up name for lpcpures@dfff0000 -> lpcpures
+(XEN) fixed up name for region@e0000000 -> region
+(XEN) fixed up name for mmode_resv3@20000000 -> mmode_resv3
+(XEN) fixed up name for mmode_resv2@10,0 -> mmode_resv2
+(XEN) fixed up name for mmode_resv1@80000000 -> mmode_resv1
+(XEN) fixed up name for mmode_resv0@80040000 -> mmode_resv0
+(XEN) fixed up name for chosen -> chosen
+(XEN) fixed up name for DOMU1 -> DOMU1
+(XEN) fixed up name for module@0x90400000 -> module
+(XEN) fixed up name for module@0x808ef000 -> module
+(XEN) fixed up name for hypervisor -> hypervisor
+(XEN) fixed up name for memory@80000000 -> memory
+(XEN) fixed up name for cpus -> cpus
+(XEN) fixed up name for cpu@0 -> cpu
+(XEN) fixed up name for interrupt-controller -> interrupt-controller
+(XEN) fixed up name for cpu@1 -> cpu
+(XEN) fixed up name for interrupt-controller -> interrupt-controller
+(XEN) fixed up name for cpu@2 -> cpu
+(XEN) fixed up name for interrupt-controller -> interrupt-controller
+(XEN) fixed up name for cpu@3 -> cpu
+(XEN) fixed up name for interrupt-controller -> interrupt-controller
+(XEN) fixed up name for cpu-map -> cpu-map
+(XEN) fixed up name for cluster0 -> cluster0
+(XEN) fixed up name for core0 -> core0
+(XEN) fixed up name for core1 -> core1
+(XEN) fixed up name for core2 -> core2
+(XEN) fixed up name for core3 -> core3
+(XEN) fixed up name for soc -> soc
+(XEN) fixed up name for serial@0x50900000 -> serial
+(XEN) fixed up name for interrupt-controller@c000000 -> interrupt-controller
+(XEN)  <- unflatten_device_tree()
+(XEN) Falling back to deprecated "riscv,isa"
+(XEN) riscv: base ISA extensions acdfim
+(XEN) riscv: ELF capabilities acdfim
+(XEN) SMP: Allowing 4 CPUs
+(XEN) Taking dtuart configuration from /chosen/stdout-path
+(XEN) Looking for dtuart at "/soc/serial@0x50900000", options "115200n8"
+(XEN) [DBG] Baud rate is -1
+(XEN) DT: ** translation for device /soc/serial@0x50900000 **
+(XEN) DT: bus is default (na=2, ns=2) on /soc
+(XEN) DT: translating address:<3> 00000000<3> 50900000<3>
+(XEN) DT: parent bus is default (na=2, ns=2) on /
+(XEN) DT: empty ranges; 1:1 translation
+(XEN) DT: parent translation for:<3> 00000000<3> 00000000<3>
+(XEN) DT: with offset: 50900000
+(XEN) DT: one level translation:<3> 00000000<3> 50900000<3>
+(XEN) DT: reached root node
+(XEN) dt_device_get_raw_irq: dev=/soc/serial@0x50900000, index=0
+(XEN)  using 'interrupts' property
+(XEN)  intspec=100 intlen=1
+(XEN)  intsize=1 intlen=1
+(XEN) dt_irq_map_raw: par=/soc/interrupt-controller@c000000,intspec=[0x00000064 0x00000003...],ointsize=1
+(XEN) dt_irq_map_raw: ipar=/soc/interrupt-controller@c000000, size=1
+(XEN)  -> addrsize=0
+(XEN)  -> got it !
+(XEN) [DBG] Baud rate is -1 - ns16550.c line 345 
+(XEN) Automatic baud rate determination was requested, but a baud rate was not set up Xen 4.18-unstable
+(XEN) Xen version 4.18-unstable (@) (riscv64-linux-gnu-gcc (GCC) 12.2.0) debug=y Mon Oct 27 11:43:54 UTC 2025
+(XEN) Latest ChangeSet: Tue Dec 3 20:41:06 2024 +0100 git:bff0d6f9df-dirty
+(XEN) build-id: bdd99c99fdf126b80f82323f73a21db441acf38d
+(XEN) init_xen_time: need to be implemented
+(XEN) init_timer_interrupt: need to be implemented
+(XEN) Using scheduler: null Scheduler (null)
+(XEN) Initializing null scheduler
+(XEN) WARNING: This is experimental software in development.
+(XEN) Use at your own risk.
+(XEN) Create vCPU with sp=0x6400008e0ee8, pc=0xffffffffc0028fb8, cpu_info(0x6400008e0ee8)
+All set up
