@@ -9,7 +9,7 @@
 	chosen {
 		xen,xen-bootargs = "com1=poll sched=null";
 		
-		stdout-path = "/soc/serial@0x50900000:115200n8";
+		stdout-path = "/soc/serial@0x50900000";
 		
 		DOMU1 {
 			#address-cells = <0x01>;
