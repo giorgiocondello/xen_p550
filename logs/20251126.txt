@@ -1,0 +1,658 @@
+[?2004h[01;32mgiorgiocondello@INV973[00m:[01;34m~/Desktop/logs[00m$ scren /dev/ttyUSB2 115200
+[?2004lCommand 'scren' not found, did you mean:
+  command 'screen' from deb screen (4.9.1-1build1)
+Try: sudo apt install <deb name>
+[?2004h[01;32mgiorgiocondello@INV973[00m:[01;34m~/Desktop/logs[00m$ scren /dev/ttyUSB2 115200[1@e
+[?2004l[?2004h[01;32mgiorgiocondello@INV973[00m:[01;34m~/Desktop/logs[00m$ pll config ok
+die_num:0,die_ordinal:0
+Firmware version:1.5;disable ECC
+PHY0 training process:06%
+[1A[KPHY0 training process:12%
+[1A[KPHY0 training process:18%
+[1A[KPHY0 training process:24%
+[1A[KPHY0 training process:30%
+[1A[KPHY0 training process:36%
+[1A[KPHY0 training process:42%
+[1A[KPHY0 training process:48%
+[1A[KPHY0 training process:54%
+[1A[KPHY0 training process:60%
+[1A[KPHY0 training process:66%
+[1A[KPHY0 training process:72%
+[1A[KPHY0 training process:78%
+[1A[KPHY0 training process:84%
+[1A[KPHY0 training process:90%
+[1A[KPHY0 training process:96%
+[1A[KPHY0 training process:100%
+[1A[KPHY0 training process:100%
+PHY1 training process:06%
+[1A[KPHY1 training process:12%
+[1A[KPHY1 training process:18%
+[1A[KPHY1 training process:24%
+[1A[KPHY1 training process:30%
+[1A[KPHY1 training process:36%
+[1A[KPHY1 training process:42%
+[1A[KPHY1 training process:48%
+[1A[KPHY1 training process:54%
+[1A[KPHY1 training process:60%
+[1A[KPHY1 training process:66%
+[1A[KPHY1 training process:72%
+[1A[KPHY1 training process:78%
+[1A[KPHY1 training process:84%
+[1A[KPHY1 training process:90%
+[1A[KPHY1 training process:96%
+[1A[KPHY1 training process:100%
+[1A[KPHY1 training process:100%
+DDR type:LPDDR5;Size:16GB,Data Rate:6400MT/s
+DDR self test OK
+
+OpenSBI v1.4
+   ____                    _____ ____ _____
+  / __ \                  / ____|  _ \_   _|
+ | |  | |_ __   ___ _ __ | (___ | |_) || |
+ | |  | | '_ \ / _ \ '_ \ \___ \|  _ < | |
+ | |__| | |_) |  __/ | | |____) | |_) || |_
+  \____/| .__/ \___|_| |_|_____/|____/_____|
+        | |
+        |_|
+
+Platform Name             : ESWIN EIC770X
+Platform Features         : none
+Platform HART Count       : 4
+Platform IPI Device       : aclint-mswi
+Platform Timer Device     : aclint-mtimer @ 1000000Hz
+Platform Console Device   : uart8250
+Platform HSM Device       : ---
+Platform PMU Device       : ---
+Platform Reboot Device    : eswin_eic770x_reset
+Platform Shutdown Device  : eswin_eic770x_reset
+Platform Suspend Device   : ---
+Platform CPPC Device      : ---
+Firmware Base             : 0x80000000
+Firmware Size             : 344 KB
+Firmware RW Offset        : 0x40000
+Firmware RW Size          : 88 KB
+Firmware Heap Offset      : 0x4c000
+Firmware Heap Size        : 40 KB (total), 2 KB (reserved), 9 KB (used), 28 KB (free)
+Firmware Scratch Size     : 4096 B (total), 296 B (used), 3800 B (free)
+Runtime SBI Version       : 2.0
+
+Domain0 Name              : root
+Domain0 Boot HART         : 0
+Domain0 HARTs             : 0*,1*,2*,3*
+Domain0 Region00          : 0x0000000002008000-0x000000000200bfff M: (I,R,W) S/U: ()
+Domain0 Region01          : 0x0000000002000000-0x0000000002007fff M: (I,R,W) S/U: ()
+Domain0 Region02          : 0x0000000080040000-0x000000008005ffff M: (R,W) S/U: ()
+Domain0 Region03          : 0x0000000080000000-0x000000008003ffff M: (R,X) S/U: ()
+Domain0 Region04          : 0x0000001000000000-0x0000007fffffffff M: () S/U: ()
+Domain0 Region05          : 0x0000000020000000-0x000000003fffffff M: () S/U: ()
+Domain0 Region06          : 0x0000000000000000-0xffffffffffffffff M: () S/U: (R,W,X)
+Domain0 Next Address      : 0x0000000080200000
+Domain0 Next Arg1         : 0x00000000f8000000
+Domain0 Next Mode         : S-mode
+Domain0 SysReset          : yes
+Domain0 SysSuspend        : yes
+
+Boot HART ID              : 0
+Boot HART Domain          : root
+Boot HART Priv Version    : v1.11
+Boot HART Base ISA        : rv64imafdchx
+Boot HART ISA Extensions  : sscofpmf,zihpm
+Boot HART PMP Count       : 8
+Boot HART PMP Granularity : 12 bits
+Boot HART PMP Address Bits: 39
+Boot HART MHPM Info       : 4 (0x00000078)
+Boot HART MIDELEG         : 0x0000000000002666
+Boot HART MEDELEG         : 0x0000000000f00509
+
+
+U-Boot 2024.01 (Feb 10 2025 - 07:38:29 +0000)
+
+CPU:   rv64imafdc_zba_zbb
+Model: SiFive HiFive Premier P550
+DRAM:  16 GiB
+Core:  141 devices, 30 uclasses, devicetree: separate
+Warning: Device tree includes old 'u-boot,dm-' tags: please fix by 2023.07!
+MMC:   sdhci@50450000: 0, sd@50460000: 1
+Loading Environment from SPIFlash... SF: Detected w25q128fw with page size 256 Bytes, erase size 4 KiB, total 16 MiB
+*** Warning - bad CRC, using default environment
+
+eswin_pcie_wait_link_up: error: wait linkup timeout
+PCIE-0: Link up (Gen1-x1, Bus0)
+[display_init]Eswin UBOOT DRM driver version: v1.0.1
+In:    serial,usbkbd
+Out:   vidconsole,serial
+Err:   vidconsole,serial
+Success to initialize SPI flash at spi@51800000
+Bootspi flash write protection enabled
+Get som info from flash
+ERROR: No valid SOM Board info
+Cpu volatge need boost above 1.6 Ghz!
+Low power features will not be supported!
+Net:   eth0: ethernet@50400000
+Working FDT set to ed519130
+starting USB...
+Bus usb1@50490000: Register 2000140 NbrPorts 2
+Starting the controller
+USB XHCI 1.10
+scanning bus usb1@50490000 for devices... 3 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+No SATA device found!
+Hit any key to stop autoboot:  2  0
+=> es_fs update mmc boot.vfat mmc 1boot.vfat mmc boot.vfat mmcboot.vfat mmc 0#boot
+Write progress:   0%:Write progress:  12%:++++++Write progress:  25%:++++++++++++Write progress:  37%:++++++++++++++++++Write progress:  50%:+++++++++++++++++++++++++Write progress:  62%:+++++++++++++++++++++++++++++++Write progress:  75%:+++++++++++++++++++++++++++++++++++++Write progress:  87%:+++++++++++++++++++++++++++++++++++++++++++Write progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++Write progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++
+mmc has been successfully writen in mmc 0#boot
+=> fatls mmc 0:1
+ 23014512   vmlinux
+  6881133   Image.gz
+   574672   xen.uImage
+  6656000   initrd.img
+     2884   eic7700-hifive-premier-p550.dtb
+            extlinux/
+
+5 file(s), 1 dir(s)
+
+=> fatloasd  d mmc 0:1 0x808ef0000    Image.gz
+6881133 bytes read in 51 ms (128.7 MiB/s)
+=> fatload mmc 0:1 0x9040 n initrd.img
+** Reading file would overwrite reserved memory **
+Failed to load 'initrd.img'
+=> fatload mmc 0:1 0x9040 initrd.imgimg .img0 initrd.img0 initrd.img0 initrd.img0 initrd.img
+6656000 bytes read in 49 ms (129.5 MiB/s)
+=> boot
+scanning bus for devices...
+Rescanning SATA bus for devices...
+** Booting bootflow 'sdhci@50450000.bootdev.part_1' with extlinux
+1:	OpenEmbedded-Sifive-hifive-premier-p550
+Retrieving file: /xen.uImage
+append: dom0_mem=512M console=hvc0 earlycon=sbi bootscrub=0 earlycon root=/dev/ram rw
+Retrieving file: /eic7700-hifive-premier-p550.dtb
+## Booting kernel from Legacy Image at 84000000 ...
+   Image Name:   XEN
+   Image Type:   RISC-V Linux Kernel Image (uncompressed)
+   Data Size:    574608 Bytes = 561.1 KiB
+   Load Address: 84000000
+   Entry Point:  84000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 88000000
+   Booting using the fdt blob at 0x88000000
+Working FDT set to 88000000
+   Loading Kernel Image
+   Using Device Tree in place at 0000000088000000, end 0000000088003b43
+Working FDT set to 88000000
+
+Starting kernel ...
+
+(XEN) fixmap is mapped
+Hello from C env
+If you see this message, run_in_exception_handler is most likely working
+(XEN) Xen WARN at arch/riscv/setup.c:55
+(XEN) implement show_execution_state(regs)
+If you see this message, WARN is most likely working
+(XEN) Checking for initrd in /chosen
+(XEN) Checking for "xen,static-mem" in domain node
+(XEN) RAM: 0000000080000000 - 00000000ffffffff
+(XEN) 
+(XEN) MODULE[0]: 0000000088000000 - 0000000088001000 Device Tree 
+(XEN) MODULE[1]: 0000000090400000 - 0000000090a59000 Ramdisk     
+(XEN) MODULE[2]: 00000000808ef000 - 0000000080f7ef6d Kernel      
+(XEN)  RESVD[0]: 00000000dfff0000 - 00000000dfffffff
+(XEN)  RESVD[1]: 00000000e0000000 - 00000000e0ffffff
+(XEN)  RESVD[2]: 0000000020000000 - 000000003fffffff
+(XEN)  RESVD[3]: 0000001000000000 - 00000010003fffff
+(XEN)  RESVD[4]: 0000000080000000 - 000000008003ffff
+(XEN)  RESVD[5]: 0000000080040000 - 000000008005ffff
+(XEN) 
+(XEN) CMDLINE[00000000808ef000]:DOMU1 rw root=/dev/ram console=hvc0 earlycon=sbi earlyprintk keep_bootcon bootmem_debug debug
+(XEN) 
+(XEN) Command line: com1=poll sched=null
+(XEN) Domain heap initialised
+(XEN)  -> unflatten_device_tree()
+(XEN) Unflattening device tree:
+(XEN) magic: 0xd00dfeed
+(XEN) size: 0x001000
+(XEN) version: 0x000011
+(XEN)   size is 0x2918 allocating...
+(XEN)   unflattening 6400008e8000...
+(XEN) fixed up name for  -> 
+(XEN) fixed up name for reserved-memory -> reserved-memory
+(XEN) fixed up name for lpcpures@dfff0000 -> lpcpures
+(XEN) fixed up name for region@e0000000 -> region
+(XEN) fixed up name for mmode_resv3@20000000 -> mmode_resv3
+(XEN) fixed up name for mmode_resv2@10,0 -> mmode_resv2
+(XEN) fixed up name for mmode_resv1@80000000 -> mmode_resv1
+(XEN) fixed up name for mmode_resv0@80040000 -> mmode_resv0
+(XEN) fixed up name for chosen -> chosen
+(XEN) fixed up name for DOMU1 -> DOMU1
+(XEN) fixed up name for module@0x90400000 -> module
+(XEN) fixed up name for module@0x808ef000 -> module
+(XEN) fixed up name for hypervisor -> hypervisor
+(XEN) fixed up name for memory@80000000 -> memory
+(XEN) fixed up name for cpus -> cpus
+(XEN) fixed up name for cpu@0 -> cpu
+(XEN) fixed up name for interrupt-controller -> interrupt-controller
+(XEN) fixed up name for cpu@1 -> cpu
+(XEN) fixed up name for interrupt-controller -> interrupt-controller
+(XEN) fixed up name for cpu@2 -> cpu
+(XEN) fixed up name for interrupt-controller -> interrupt-controller
+(XEN) fixed up name for cpu@3 -> cpu
+(XEN) fixed up name for interrupt-controller -> interrupt-controller
+(XEN) fixed up name for cpu-map -> cpu-map
+(XEN) fixed up name for cluster0 -> cluster0
+(XEN) fixed up name for core0 -> core0
+(XEN) fixed up name for core1 -> core1
+(XEN) fixed up name for core2 -> core2
+(XEN) fixed up name for core3 -> core3
+(XEN) fixed up name for soc -> soc
+(XEN) fixed up name for serial@0x50900000 -> serial
+(XEN) fixed up name for interrupt-controller@c000000 -> interrupt-controller
+(XEN)  <- unflatten_device_tree()
+(XEN) Falling back to deprecated "riscv,isa"
+(XEN) riscv: base ISA extensions acdfim
+(XEN) riscv: ELF capabilities acdfim
+(XEN) SMP: Allowing 4 CPUs
+(XEN) Taking dtuart configuration from /chosen/stdout-path
+(XEN) Looking for dtuart at "/soc/serial@0x50900000", options "115200n8"
+(XEN) DT: ** translation for device /soc/serial@0x50900000 **
+(XEN) DT: bus is default (na=2, ns=2) on /soc
+(XEN) DT: translating address:<3> 00000000<3> 50900000<3>
+(XEN) DT: parent bus is default (na=2, ns=2) on /
+(XEN) DT: empty ranges; 1:1 translation
+(XEN) DT: parent translation for:<3> 00000000<3> 00000000<3>
+(XEN) DT: with offset: 50900000
+(XEN) DT: one level translation:<3> 00000000<3> 50900000<3>
+(XEN) DT: reached root node
+(XEN) dt_device_get_raw_irq: dev=/soc/serial@0x50900000, index=0
+(XEN) there is no interrupt property, polling will be used Xen 4.18-unstable
+(XEN) Xen version 4.18-unstable (@) (riscv64-linux-gnu-gcc (GCC) 12.2.0) debug=y Wed Nov 26 09:01:17 UTC 2025
+(XEN) Latest ChangeSet: Thu Mar 27 13:54:26 2025 +0000 git:a78777cd81-dirty
+(XEN) build-id: d3a47464d517ae04d0ae4df8aa0b0580ceb88c11
+(XEN) init_xen_time: need to be implemented
+(XEN) init_timer_interrupt: need to be implemented
+(XEN) Using scheduler: null Scheduler (null)
+(XEN) Initializing null scheduler
+(XEN) WARNING: This is experimental software in development.
+(XEN) Use at your own risk.
+(XEN) Create vCPU with sp=0x6400008e0ee8, pc=0xffffffffc0028f50, cpu_info(0x6400008e0ee8)
+All set up
+(XEN) Allocated [    0.000000] Linux version 6.4.0 (root@2dbcba4f3796) (riscv64-linux-gnu-gcc (Ubuntu 13.2.0-23ubuntu4) 13.2.0, GNU ld (GNU Binutils for Ubuntu) 2.42) #1 SMP Tue Jan 28 09:36:42 CET 2025
+[    0.000000] earlycon: sbi0 at I/O port 0x0 (options '')
+[    0.000000] printk: bootconsole [sbi0] enabled
+[    0.000000] printk: debug: skip boot console de-registration.
+[    0.000000] efi: UEFI not found.
+console ring of 16 KiB.
+(XEN) C[    0.000000] Zone ranges:
+[    0.000000]   DMA32    [mem 0x0000000080000000-0x000000008fffffff]
+[    0.000000]   Normal   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000080000000-0x000000008fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000080000000-0x000000008fffffff]
+reate vCPU with [    0.000000] SBI specification v2.0 detected
+[    0.000000] SBI implementation ID=0x1 Version=0x10004
+[    0.000000] SBI TIME extension detected
+[    0.000000] SBI IPI extension detected
+[    0.000000] SBI RFENCE extension detected
+[    0.000000] SBI SRST extension detected
+[    0.000000] SBI HSM extension detected
+[    0.000000] riscv: base ISA extensions acdfim
+[    0.000000] riscv: ELF capabilities acdfim
+[    0.000000] percpu: Embedded 19 pages/cpu s40056 r8192 d29576 u77824
+[    0.000000] pcpu-alloc: s40056 r8192 d29576 u77824 alloc=19*4096
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Kernel command line: rw root=/dev/ram console=hvc0 earlycon=sbi earlyprintk keep_bootcon bootmem_debug debug
+[    0.000000] Unknown kernel command line parameters "earlyprintk bootmem_debug", will be passed to user space.
+[    0.000000] Dentry cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 64512
+[    0.000000] mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+sp=0x64007fff0ee8, pc=0xffffffffc0028f50, cpu_in[    0.000000] Virtual kernel memory layout:
+[    0.000000]       fixmap : 0xffff8d7ffea00000 - 0xffff8d7fff000000   (6144 kB)
+[    0.000000]       pci io : 0xffff8d7fff000000 - 0xffff8d8000000000   (  16 MB)
+[    0.000000]      vmemmap : 0xffff8d8000000000 - 0xffff8f8000000000   (2048 GB)
+[    0.000000]      vmalloc : 0xffff8f8000000000 - 0xffffaf8000000000   (  32 TB)
+[    0.000000]      modules : 0xffffffff01576000 - 0xffffffff80000000   (2026 MB)
+[    0.000000]       lowmem : 0xffffaf8000000000 - 0xffffaf8010000000   ( 256 MB)
+[    0.000000]       kernel : 0xffffffff80000000 - 0xffffffffffffffff   (2047 MB)
+[    0.000000] Memory: 212124K/262144K available (8678K kernel code, 4961K rwdata, 4096K rodata, 2195K init, 476K bss, 50020K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=1.
+[    0.000000] rcu: 	RCU debug extended QS entry/exit.
+[    0.000000] 	Tracing variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] riscv-intc: 64 local interrupts mapped
+[    0.000000] riscv: providing IPIs using SBI IPI extension
+[    0.000000] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.000000] riscv-timer: riscv_timer_init_dt: Registering clocksource cpuid [0] hartid [0]
+[    0.000000] clocksource: riscv_clocksource: mask: 0xffffffffffffffff max_cycles: 0x1d854df40, max_idle_ns: 3526361616960 ns
+[    0.000004] sched_clock: 64 bits at 1000kHz, resolution 1000ns, wraps every 2199023255500ns
+[    0.008662] Console: colour dummy device 80x25
+[    0.013172] printk: console [hvc0] enabled
+[    0.013172] printk: console [hvc0] enabled
+[    0.021555] Calibrating delay loop (skipped), value calculated using timer frequency.. 2.00 BogoMIPS (lpj=4000)
+[    0.021555] Calibrating delay loop (skipped), value calculated using timer frequency.. 2.00 BogoMIPS (lpj=4000)
+[    0.041824] pid_max: default: 32768 minimum: 301
+[    0.041824] pid_max: default: 32768 minimum: 301
+[    0.051331] LSM: initializing lsm=capability,integrity
+[    0.051331] LSM: initializing lsm=capability,integrity
+[    0.061901] Mount-cache hash table entries: 512 (order: 0, 4096 bytes, linear)
+[    0.061901] Mount-cache hash table entries: 512 (order: 0, 4096 bytes, linear)
+[    0.076452] Mountpoint-cache hash table entries: 512 (order: 0, 4096 bytes, linear)
+[    0.076452] Mountpoint-cache hash table entries: 512 (order: 0, 4096 bytes, linear)
+fo(0x64007fff0ee8)
+(XEN) CPU1 b[    0.096212] cblist_init_generic: Setting adjustable number of callback queues.
+[    0.096212] cblist_init_generic: Setting adjustable number of callback queues.
+[    0.110755] cblist_init_generic: Setting shift to 0 and lim to 1.
+[    0.110755] cblist_init_generic: Setting shift to 0 and lim to 1.
+oot addr: 0x8402[    0.123363] riscv: ELF compat mode unsupported
+[    0.123363] riscv: ELF compat mode unsupported
+[    0.123428] ASID allocator disabled (0 bits)
+[    0.123428] ASID allocator disabled (0 bits)
+[    0.142773] rcu: Hierarchical SRCU implementation.
+[    0.142773] rcu: Hierarchical SRCU implementation.
+[    0.152444] rcu: 	Max phase no-delay instances is 1000.
+[    0.152444] rcu: 	Max phase no-delay instances is 1000.
+bdf0, stack addr[    0.163761] EFI services will not be available.
+[    0.163761] EFI services will not be available.
+: 0x84072000
+(X[    0.174179] smp: Bringing up secondary CPUs ...
+[    0.174179] smp: Bringing up secondary CPUs ...
+[    0.184373] smp: Brought up 1 node, 1 CPU
+[    0.184373] smp: Brought up 1 node, 1 CPU
+EN) init_timer_i[    0.193536] devtmpfs: initialized
+[    0.193536] devtmpfs: initialized
+nterrupt: need t[    0.202671] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.202671] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.222420] futex hash table entries: 256 (order: 2, 16384 bytes, linear)
+[    0.222420] futex hash table entries: 256 (order: 2, 16384 bytes, linear)
+[    0.236477] pinctrl core: initialized pinctrl subsystem
+[    0.236477] pinctrl core: initialized pinctrl subsystem
+o be implemented[    0.248870] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.248870] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+
+(XEN) CPU 1 bo[    0.262166] DMA: preallocated 128 KiB GFP_KERNEL pool for atomic allocations
+[    0.262166] DMA: preallocated 128 KiB GFP_KERNEL pool for atomic allocations
+[    0.277414] DMA: preallocated 128 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.277414] DMA: preallocated 128 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.293476] audit: initializing netlink subsys (disabled)
+[    0.293476] audit: initializing netlink subsys (disabled)
+oted.
+(XEN) idl[    0.305716] cpuidle: using governor menu
+[    0.305716] cpuidle: using governor menu
+e_loop
+(XEN) Cr[    0.314713] audit: type=2000 audit(0.188:1): state=initialized audit_enabled=0 res=1
+[    0.314713] audit: type=2000 audit(0.188:1): state=initialized audit_enabled=0 res=1
+eate vCPU with s[    0.333619] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.333619] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.347363] HugeTLB: 28 KiB vmemmap can be freed for a 2.00 MiB page
+[    0.347363] HugeTLB: 28 KiB vmemmap can be freed for a 2.00 MiB page
+p=0x640008008ee8[    0.361687] iommu: Default domain type: Translated 
+[    0.361687] iommu: Default domain type: Translated 
+[    0.371660] iommu: DMA domain TLB invalidation policy: strict mode 
+[    0.371660] iommu: DMA domain TLB invalidation policy: strict mode 
+, pc=0xffffffffc[    0.385341] SCSI subsystem initialized
+[    0.385341] SCSI subsystem initialized
+[    0.393854] libata version 3.00 loaded.
+[    0.393854] libata version 3.00 loaded.
+[    0.402158] usbcore: registered new interface driver usbfs
+[    0.402158] usbcore: registered new interface driver usbfs
+[    0.413353] usbcore: registered new interface driver hub
+[    0.413353] usbcore: registered new interface driver hub
+[0028f50, cpu_inf    0.424184] usbcore: registered new device driver usb
+[    0.424184] usbcore: registered new device driver usb
+o(0x640008008ee8[    0.437944] vgaarb: loaded
+[    0.437944] vgaarb: loaded
+[    0.444106] clocksource: Switched to clocksource riscv_clocksource
+[    0.444106] clocksource: Switched to clocksource riscv_clocksource
+)
+(XEN) CPU2 boot addr: 0x8402bdf0, stack addr: 0x84073000
+(XEN) init_timer_interrupt: need to be implemented
+(XEN) CPU 2 booted.
+(XEN) idle_loop
+(XEN) Create vCPU with sp=0x64007ffe8ee8, pc=0xffffffffc0[    0.482624] NET: Registered PF_INET protocol family
+[    0.482624] NET: Registered PF_INET protocol family
+028f50, cpu_info[    0.492807] IP idents hash table entries: 4096 (order: 3, 32768 bytes, linear)
+[    0.492807] IP idents hash table entries: 4096 (order: 3, 32768 bytes, linear)
+(0x64007ffe8ee8)[    0.509868] tcp_listen_portaddr_hash hash table entries: 128 (order: 0, 4096 bytes, linear)
+[    0.509868] tcp_listen_portaddr_hash hash table entries: 128 (order: 0, 4096 bytes, linear)
+[    0.527903] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.527903] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.543549] TCP established hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.543549] TCP established hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.559199] TCP bind hash table entries: 2048 (order: 5, 131072 bytes, linear)
+[    0.559199] TCP bind hash table entries: 2048 (order: 5, 131072 bytes, linear)
+[    0.573825] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.573825] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.586778] UDP hash table entries: 256 (order: 2, 24576 bytes, linear)
+[    0.586778] UDP hash table entries: 256 (order: 2, 24576 bytes, linear)
+[    0.600175] UDP-Lite hash table entries: 256 (order: 2, 24576 bytes, linear)
+[    0.600175] UDP-Lite hash table entries: 256 (order: 2, 24576 bytes, linear)
+
+(XEN) CPU3 boo[    0.614754] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.614754] NET: Registered PF_UNIX/PF_LOCAL protocol family
+t addr: 0x8402bd[    0.628637] RPC: Registered named UNIX socket transport module.
+[    0.628637] RPC: Registered named UNIX socket transport module.
+[    0.641517] RPC: Registered udp transport module.
+[    0.641517] RPC: Registered udp transport module.
+[    0.651053] RPC: Registered tcp transport module.
+[    0.651053] RPC: Registered tcp transport module.
+[    0.660600] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.660600] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.673640] PCI: CLS 0 bytes, default 64
+[    0.673640] PCI: CLS 0 bytes, default 64
+f0, stack addr: 0x84074000
+(XEN[    0.683821] Trying to unpack rootfs image as initramfs...
+[    0.683821] Trying to unpack rootfs image as initramfs...
+[    0.696359] rootfs image is not initramfs (invalid magic at start of compressed archive); looks like an initrd
+[    0.696359] rootfs image is not initramfs (invalid magic at start of compressed archive); looks like an initrd
+) init_timer_interrupt: need to be implemented
+(XEN) Brought up 4 CPUs
+(XEN) CPU 3 booted.
+(XEN) Scheduling granularity: cpu, 1 CPU per sched-resource
+(XEN) idle_loop
+(XEN) Initializing n[    0.740369] workingset: timestamp_bits=46 max_order=16 bucket_order=0
+[    0.740369] workingset: timestamp_bits=46 max_order=16 bucket_order=0
+ull scheduler
+(XEN) WARNING: This is experimental software in development.
+(XEN) Use at your own risk.
+(XEN) Logical CPU 0 in Pool-0 (Schedul[    0.772450] NFS: Registering the id_resolver key type
+[    0.772450] NFS: Registering the id_resolver key type
+[    0.782715] Key type id_resolver registered
+[    0.782715] Key type id_resolver registered
+[    0.791191] Key type id_legacy registered
+[    0.791191] Key type id_legacy registered
+[    0.799450] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    0.799450] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    0.812961] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+[    0.812961] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+er id: -1).
+(XEN) Logical CPU 1 in Pool-0 (Scheduler id: -1).
+(XEN) Logical CPU 2 in Pool-0 (Scheduler id: -1).
+(XEN) Logical[    0.844236] Freeing initrd memory: 6496K
+[    0.844236] Freeing initrd memory: 6496K
+[    0.852371] 9p: Installing v9fs 9p2000 file system support
+[    0.852371] 9p: Installing v9fs 9p2000 file system support
+[    0.863983] NET: Registered PF_ALG protocol family
+[    0.863983] NET: Registered PF_ALG protocol family
+[    0.873834] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    0.873834] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    0.888746] io scheduler mq-deadline registered
+[    0.888746] io scheduler mq-deadline registered
+[    0.897934] io scheduler kyber registered
+[    0.897934] io scheduler kyber registered
+[    0.906187] io scheduler bfq registered
+[    0.906187] io scheduler bfq registered
+ CPU 3 in Pool-0 (Scheduler id: -1).
+(XEN) SBI specification v2.0 detected
+(XEN) SBI implementation ID=0x1 Version=0x10004
+(XEN) SBI v0.2 TIME extension detected
+(XEN) SBI v0.2 IPI extension detected
+(XEN) SBI v0.2 RFENCE extension detected
+(XEN) Xen dom0less mode detected
+(XEN) domain_vtimer_init: to be implemented
+(XEN) *** LOADING DOMU cpus=1 memory=0x40000KB ***
+(XEN) Create vCPU with sp=0x64007ff48ee8, pc=0xffffffffc0028f50, cpu_info(0x64007ff48ee8)
+(XEN) Loading d1 kernel from boot module @ 00000000808ef000
+(XEN) Loading ramdisk from boot module @ 0000000090400000
+(XEN) Allocating mappings totalling 256MB for d1:
+(XEN) guest_physmap_add_entry: map 65536 pages from gfn 0x80000000 to mfn 0xc0000000
+(XEN) d1 BANK[0] 0x00000080000000-0x00000090000000 (256MB)
+(XEN) Create chosen node
+(XEN) Create cpus node
+(XEN) Create memory node
+(XEN)   Bank 0: 0x80000000->0x90000000
+(XEN) (reg size 4, nr cells 4)
+(XEN) make_timer_node: need to be implemented
+(XEN) -------------- DTS DUMP START --------------
+(XEN) #address-cells = <0x2>;
+(XEN) #size-cells = <0x2>;
+(XEN) chosen {
+(XEN)   bootargs = "rw root=/dev/ram console=hvc0 earlycon=sbi earlyprintk keep_bootcon bootmem_debug debug";
+(XEN)   linux,initrd-start = <0x0 0x0 >;
+(XEN)   linux,initrd-end = <0x0 0x0[    1.078205] Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+[    1.078205] Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+ >;
+(XEN) };
+([    1.093512] SuperH (H)SCI(F) driver initialized
+[    1.093512] SuperH (H)SCI(F) driver initialized
+XEN) cpus {
+(XEN)   #address-cells = <0x1>;
+(XEN)   #size-cells = <0x0>;
+(XEN)   timebase-frequency = <0xf4240>;
+(XEN)   cpu[    1.118825] brd: module loaded
+[    1.118825] brd: module loaded
+@0 {
+(XEN)     reg = <0x0>;
+(XEN)     status = "okay";
+(XEN)     compatible =[    1.134106] loop: module loaded
+[    1.134106] loop: module loaded
+ "riscv";
+(XEN)     mmu-type = [    1.144415] e1000e: Intel(R) PRO/1000 Network Driver
+[    1.144415] e1000e: Intel(R) PRO/1000 Network Driver
+[    1.155659] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    1.155659] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+"riscv,sv48";
+([    1.168764] usbcore: registered new interface driver uas
+[    1.168764] usbcore: registered new interface driver uas
+[    1.180739] usbcore: registered new interface driver usb-storage
+[    1.180739] usbcore: registered new interface driver usb-storage
+XEN)     riscv,i[    1.193214] mousedev: PS/2 mouse device common for all mice
+[    1.193214] mousedev: PS/2 mouse device common for all mice
+sa = "rv64imafdc[    1.206619] sdhci: Secure Digital Host Controller Interface driver
+[    1.206619] sdhci: Secure Digital Host Controller Interface driver
+[    1.219421] sdhci: Copyright(c) Pierre Ossman
+[    1.219421] sdhci: Copyright(c) Pierre Ossman
+[    1.228430] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.228430] sdhci-pltfm: SDHCI platform and OF driver helper
+";
+(XEN)     de[    1.240295] usbcore: registered new interface driver usbhid
+[    1.240295] usbcore: registered new interface driver usbhid
+[    1.252793] usbhid: USB HID core driver
+[    1.252793] usbhid: USB HID core driver
+[    1.260911] riscv-pmu-sbi: SBI PMU extension is available
+[    1.260911] riscv-pmu-sbi: SBI PMU extension is available
+[    1.271820] riscv-pmu-sbi: SBI PMU extension doesn't provide any counters
+[    1.271820] riscv-pmu-sbi: SBI PMU extension doesn't provide any counters
+[    1.285951] NET: Registered PF_INET6 protocol family
+[    1.285951] NET: Registered PF_INET6 protocol family
+vice_type = "cpu[    1.297698] Segment Routing with IPv6
+[    1.297698] Segment Routing with IPv6
+[    1.305733] In-situ OAM (IOAM) with IPv6
+[    1.305733] In-situ OAM (IOAM) with IPv6
+[    1.313738] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    1.313738] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+";
+(XEN)     in[    1.326542] NET: Registered PF_PACKET protocol family
+[    1.326542] NET: Registered PF_PACKET protocol family
+[    1.338077] 9pnet: Installing 9P2000 support
+[    1.338077] 9pnet: Installing 9P2000 support
+[    1.346821] Key type dns_resolver registered
+[    1.346821] Key type dns_resolver registered
+[    1.355521] start plist test
+[    1.355521] start plist test
+terrupt-controll[    1.363261] end plist test
+[    1.363261] end plist test
+er {
+(XEN)       compatible = "riscv,cpu-intc";
+(XEN)       #interrupt-cells = <0x1>;
+(XEN)       interrupt-controller;
+(XEN)       phandle [    1.387293] debug_vm_pgtable: [debug_vm_pgtable         ]: Validating architecture page table helpers
+[    1.387293] debug_vm_pgtable: [debug_vm_pgtable         ]: Validating architecture page table helpers
+[    1.406586] clk: Disabling unused clocks
+[    1.406586] clk: Disabling unused clocks
+= <0x1>;
+(XEN) [    1.415453] RAMDISK: ext2 filesystem found at block 0
+[    1.415453] RAMDISK: ext2 filesystem found at block 0
+    };
+(XEN)   };
+(XEN) };
+(XEN) memory@80000000 {
+(XEN)   device_type = "memory";
+(XEN)   reg = <0x0 0x80000000 0x0 0x10000000 >;
+(XEN) };
+(XEN) -------------- DTS DUMP END --------------
+(XEN) Loading zImage from 0000000092000000 to 0000000080200000-00000000816fd400
+(XEN) copying d1 0x61000001a000-0x610001517400 to 0x80200000-0x816fd400
+(XEN) Loading d1 initrd from 0000000090400000 to 0x0000000081800342-0x0000000081e59342
+(XEN) copying d1 0x61000001a000-0x610000673000 to 0x81800342-0x81e59342
+(XEN) Loading d1 DTB to 0x0000000081800000-0x0000000081800342
+(XEN) copying d1 0x64007ff36000-0x64007ff36342 to 0x81800000-0x81800342
+(XEN) Std. Loglevel: All
+(XEN) Guest Loglevel: All
+(XEN) *** Serial input to DOM1 (type 'CTRL-a' three times to switch input)
+(XEN) common/sched/null.c:355: 0 <-- d1v0
+(XEN) idle_loop
+(XEN) ctxt_switch_from: is_idle_vcpu
+(XEN) UNKNOWN Guest SBI extension id 0x504d55, FID #0
+[    1.426712] RAMDISK: Loading 6500KiB [1 disk] into ram disk... |/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-done.
+[    1.426712] RAMDISK: Loading 6500KiB [1 disk] into ram disk... |/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-done.
+[    1.878575] EXT4-fs (ram0): mounting ext2 file system using the ext4 subsystem
+[    1.878575] EXT4-fs (ram0): mounting ext2 file system using the ext4 subsystem
+[    1.894717] EXT4-fs (ram0): mounted filesystem 00000000-0000-0000-0000-000000000000 r/w without journal. Quota mode: disabled.
+[    1.894717] EXT4-fs (ram0): mounted filesystem 00000000-0000-0000-0000-000000000000 r/w without journal. Quota mode: disabled.
+[    1.917698] VFS: Mounted root (ext2 filesystem) on device 1:0.
+[    1.917698] VFS: Mounted root (ext2 filesystem) on device 1:0.
+[    1.929722] devtmpfs: error mounting -2
+[    1.929722] devtmpfs: error mounting -2
+[    1.938257] Freeing unused kernel image (initmem) memory: 2192K
+[    1.938257] Freeing unused kernel image (initmem) memory: 2192K
+[    1.950220] Run /sbin/init as init process
+[    1.950220] Run /sbin/init as init process
+[    1.958526]   with arguments:
+[    1.958526]   with arguments:
+[    1.964587]     /sbin/init
+[    1.964587]     /sbin/init
+[    1.970131]     earlyprintk
+[    1.970131]     earlyprintk
+[    1.975811]     bootmem_debug
+[    1.975811]     bootmem_debug
+[    1.981923]   with environment:
+[    1.981923]   with environment:
+[    1.988377]     HOME=/
+[    1.988377]     HOME=/
+[    1.993213]     TERM=linux
+[    1.993213]     TERM=linux
+Hello RISC-V World!
+TEST
+/etc/init.d/rcS: line 7: can't create /sys/devices/platform/passthrough/e000000.fakedev-irq/trigg: nonexistent directory
+/etc/init.d/rcS: line 9: can't create /sys/devices/platform/passthrough/e000000.fakedev-irq/trigg: nonexistent directory
+/etc/init.d/rcS: line 11: can't create /sys/devices/platform/passthrough/e001000.fakedev-irq/trigg: nonexistent directory
+/etc/init.d/rcS: line 13: can't create /sys/devices/platform/passthrough/e001000.fakedev-irq/trigg: nonexistent directory
+           CPU0       
+ 10:        387  RISC-V INTC   5 Edge      riscv-timer
+IPI0:         0  Rescheduling interrupts
+IPI1:         0  Function call interrupts
+IPI2:         0  CPU stop interrupts
+IPI3:         0  CPU stop (for crash dump) interrupts
+IPI4:         0  IRQ work interrupts
+IPI5:         0  Timer broadcast interrupts
+NOT OK
+/bin/sh: can't access tty; job control turned off
+~ # lslslslsslslslslslslslssl
+/bin/sh: lslslslsslslslslslslslssl: not found
+~ # ls
+[1;34mbin[m         [1;36mlinuxrc[m     [1;34mproc[m        [1;34msys[m
+[1;34metc[m         [1;34mlost+found[m  [1;34msbin[m        [1;34musr[m
+~ # 
